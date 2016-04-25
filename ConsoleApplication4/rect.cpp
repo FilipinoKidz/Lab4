@@ -87,30 +87,30 @@ bool operator!=(Rectangle R1, Rectangle R2){
 		return false;
 }
 
-istream& operator>>(istream& is, Rectangle R){
+istream& operator>>(istream& is, Rectangle& R){
 	int w;
 	int h;
 	char tmp;
+	if (is.fail()){
+		cout << "Didn't open" << endl;
+		return is;
+	}
 
 	is >> w;
 	tmp = is.get();
 	is >> h;
-	if (tmp != ','){
-	return is;
-	}
-	if (w < 1 || w > 99){
-		is.setstate(ios_base::failbit);
-		return is;
-	}
-	else if (h < 1 || h > 99){
-		is.setstate(ios_base::failbit);
-		return is;
-	}
-	else{
+	if (tmp == ','){
+		if (w < 1 || w > 99 || h < 1 || h > 99){
+			is.setstate(ios_base::failbit);
+			return is;
+		}
 		R.set_width(w);
 		R.set_height(h);
+		return is;		
+	}
+	else{
+		cout << "Incorrect information format" << endl;
 		return is;
-
 	}
 }
 

@@ -20,6 +20,6 @@ public:
 	friend bool operator>(Rectangle, Rectangle);
 	friend bool operator>=(Rectangle, Rectangle);
 	friend bool operator!=(Rectangle, Rectangle);
-	friend istream& operator>>(istream&, Rectangle);
+	friend istream& operator>>(istream&, Rectangle&);
 	friend ostream& operator<<(ostream&, Rectangle);
 };

@@ -7,15 +7,12 @@ int main(){
 	Rectangle rect1(9, 9);
 	Rectangle rect2(4, 5);
 	Rectangle rect3(9, 9);
-	Rectangle rect4(90, 70);
+	Rectangle rect4;
 
 	inf.open("test.txt");
 	inf >> rect4;
 
 	inf.close();
-
-	cout << "rect4 Height: " << rect4.get_height() << " Width: " << rect4.get_width() << endl;
-	cout << "Area: " << rect4.area() << " Perimeter: " << rect4.perimeter() << endl << endl;
 
 	outf.open("rtest.txt");
 	outf << rect4;
