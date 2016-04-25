@@ -9,12 +9,12 @@ int main(){
 	Rectangle rect3(9, 9);
 	Rectangle rect4;
 
-	inf.open("test.txt");
+	inf.open("istream test.txt");
 	inf >> rect4;
 
 	inf.close();
 
-	outf.open("rtest.txt");
+	outf.open("ostream test.txt");
 	outf << rect4;
 
 	outf.close();
