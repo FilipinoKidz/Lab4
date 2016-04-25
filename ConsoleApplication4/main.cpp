@@ -77,7 +77,7 @@ int main(){
 	rect1.set_height(1);
 	rect1.set_width(2);
 
-	cout << "new rect1 (set) Height: " << rect1.get_height() << " Width: " << rect1.get_width() << endl;
+	cout << endl << "new rect1 (set) Height: " << rect1.get_height() << " Width: " << rect1.get_width() << endl;
 	cout << "Area: " << rect1.area() << " Perimeter: " << rect1.perimeter() << endl << endl;;
 
 	rect1 = rect2;
