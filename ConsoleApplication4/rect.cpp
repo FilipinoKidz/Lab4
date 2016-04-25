@@ -95,9 +95,9 @@ istream& operator>>(istream& is, Rectangle R){
 	is >> w;
 	tmp = is.get();
 	is >> h;
-	/*if (tmp != ','){
+	if (tmp != ','){
 	return is;
-	}*/
+	}
 	if (w < 1 || w > 99){
 		is.setstate(ios_base::failbit);
 		return is;
